@@ -1,2 +1,2 @@
 # JsWeather
-Little Application for displaying weather depending on your location.
+Little Application for displaying current weather depending on your location.
