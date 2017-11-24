@@ -1,12 +1,32 @@
-body {
-  background-image: url("./welcome-background.jpg");
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  background-color: red;
+}
+
+.background-image {
+  background-image: url('welcome-background.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  margin: 0;
-  padding: 0;
-  background-size: cover;
 
-  max-width: 100%;
-height: auto;
+  background-size: cover; /* version standardisée */
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  -moz-background-size: cover;  /* Mozilla */
+  -o-background-size: cover;
+
+  height: 100vh;
+
 }
