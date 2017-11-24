@@ -1,0 +1,12 @@
+body {
+  background-image: url("./welcome-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+
+  max-width: 100%;
+height: auto;
+}
