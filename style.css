@@ -9,9 +9,11 @@ html, body {
 
 ::selection {
   background: #80CBC4; /* WebKit/Blink Browsers */
+  color: aliceblue;
 }
 ::-moz-selection {
   background: #80CBC4; /* Gecko Browsers */
+  color: aliceblue
 }
 
 #welcome {
@@ -68,7 +70,26 @@ html, body {
 .weather-wrap > .content {
   font-family: Raleway, sans-serif;
   color: #80CBC4;
+}
+
+#city {
   font-size: 3em;
+  margin-bottom: 70px;
+}
+
+#temperature {
+  font-size: 2.5em;
+  margin-bottom: 70px;
+}
+
+#temperature-details {
+  font-size: 2.4em;
+  margin-bottom: 70px;
+}
+
+#description, #wind {
+  font-size: 2em;
+  margin-bottom: 70px;
 }
 
 .wrap > .content > #lookfor-btn {
