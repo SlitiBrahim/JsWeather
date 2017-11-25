@@ -46,7 +46,7 @@ html, body {
   width:800px; /* Assign a value */
   height:700px; /* Assign a value */
   /*background-color: pink;*/
-  /*background-color: aliceblue;*/
+  background-color: #00796B;
 }
 
 .content {
@@ -69,7 +69,8 @@ html, body {
 
 .weather-wrap > .content {
   font-family: Raleway, sans-serif;
-  color: #80CBC4;
+  color: aliceblue;
+  border-radius: 5px;
 }
 
 #city {
