@@ -7,6 +7,13 @@ html, body {
   width: 100%;
 }
 
+::selection {
+  background: #80CBC4; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #80CBC4; /* Gecko Browsers */
+}
+
 .container {
   position: relative;
 }
@@ -42,8 +49,8 @@ html, body {
   font-style: light;
   color: #455A64;
   font-size: 3em;
-  opacity: 0;
-  filter: alpha(opacity=0);
+  /*opacity: 0;*/
+  /*filter: alpha(opacity=0);*/
 }
 
 .content > #lookfor-btn {
@@ -57,6 +64,7 @@ html, body {
   color: #ffff;
   cursor: pointer;
   outline: none;
+  /*opacity: 0;*/
 }
 
 /*.content > #lookfor-btn:hover {
