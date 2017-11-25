@@ -42,6 +42,8 @@ html, body {
   font-style: light;
   color: #455A64;
   font-size: 3em;
+  opacity: 0;
+  filter: alpha(opacity=0);
 }
 
 .content > #lookfor-btn {
@@ -54,4 +56,10 @@ html, body {
   background-color: #455A64;
   color: #ffff;
   cursor: pointer;
+  outline: none;
 }
+
+/*.content > #lookfor-btn:hover {
+  background-color: #51636c;
+  transform: scale(1.2);
+}*/
