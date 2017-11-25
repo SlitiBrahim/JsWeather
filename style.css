@@ -14,10 +14,6 @@ html, body {
   background: #80CBC4; /* Gecko Browsers */
 }
 
-.container {
-  position: relative;
-}
-
 #welcome {
   background-image: url('welcome-background.jpg');
 }
@@ -39,28 +35,43 @@ html, body {
   height: 100vh;
 }
 
+.wrap .content {
+  width:1000px; /* Assign a value */
+  height:300px; /* Assign a value */
+}
+
+.weather-wrap .content {
+  width:800px; /* Assign a value */
+  height:700px; /* Assign a value */
+  /*background-color: pink;*/
+  /*background-color: aliceblue;*/
+}
+
 .content {
   position:absolute;
   top:0;
   bottom:0;
   left:0;
   right:0;
-  width:1000px; /* Assign a value */
-  height:300px; /* Assign a value */
   margin:auto;
   text-align: center;
 }
 
-.content > #content-title {
+.wrap > .content > #content-title {
   font-family: Raleway, sans-serif;
-  font-style: light;
   color: #455A64;
   font-size: 3em;
   opacity: 0;
   filter: alpha(opacity=0);
 }
 
-.content > #lookfor-btn {
+.weather-wrap > .content {
+  font-family: Raleway, sans-serif;
+  color: #80CBC4;
+  font-size: 3em;
+}
+
+.wrap > .content > #lookfor-btn {
   width: 400px;
   height: 100px;
   font-family: Raleway, sans-serif;
@@ -74,7 +85,7 @@ html, body {
   opacity: 0;
 }
 
-.content > #lookfor-btn:hover {  /* temporaly */
+.wrap > .content > #lookfor-btn:hover {  /* temporaly */
   background-color: #B2DFDB;
   box-shadow: 6px 6px 14px 1px rgba(82, 82, 82, 0.2);
 }
