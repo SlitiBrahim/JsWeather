@@ -20,22 +20,27 @@ function scaleAnim(element, newValue, inAnim=true) {  // inAnim -> parameter to 
 
   const defaultIncrementor = 0.01;
   var incrementor = (inAnim ? defaultIncrementor : -defaultIncrementor);
-  var a = 0;
+  var updatedVal = 0;
+
+  var defaultEltBg = "#455A64"; // temporary static
 
   var timer = setInterval(function(){
 
-    a = 1+incrementor;
+    updatedVal = 1+incrementor;
 
-    if ((inAnim && a >= newValue) || (!inAnim && a <= 1)) { // End if new Value is reached for inAnim, or end if default scale (1) is reached
+    if ((inAnim && updatedVal >= newValue) || (!inAnim && updatedVal <= 1)) { // End if new Value is reached for inAnim, or end if default scale (1) is reached
       clearInterval(timer);
     }
 
-    scale(element, a);
+    scale(element, updatedVal);
     incrementor += (inAnim ? defaultIncrementor : -defaultIncrementor);
 
   }, 10);
 
-  if (!inAnim) { scale(element, 1); } // reset to default scale -> prevent non ending animation so get back to default scale
+  // here reset some style properties to default when mouseoverout
+  if (!inAnim) {
+    scale(element, 1);  // reset to default scale -> prevent non ending animation so get back to default scale
+   }
 
 }
 
@@ -47,13 +52,14 @@ function didLoad() {
   var contentTitle = document.querySelector(".content > #content-title");
   var lookforBtn = document.querySelector(".content > #lookfor-btn");
 
-  var overingLookForBtn;
-  var outingLookForBtn;
-  overingLookForBtn = lookforBtn.addEventListener("mouseover", scaleAnim.bind(true, lookforBtn, 1.04));
-  outingLookForBtn = lookforBtn.addEventListener("mouseout", scaleAnim.bind(true, lookforBtn, 1.04, false));
+  fadeIn(contentTitle);
+  setTimeout(fadeIn.bind(null, lookforBtn), 1200);
 
-  // fadeIn(contentTitle);
-  // setTimeout(fadeIn.bind(null, lookforBtn), 1200);
+  lookforBtn.addEventListener("mouseover", scaleAnim.bind(true, lookforBtn, 1.04));
+  lookforBtn.addEventListener("mouseout", scaleAnim.bind(true, lookforBtn, 1.04, false));
+  lookforBtn.addEventListener("click", function() {
+    window.location.href = "index.html";
+  });
 }
 
 window.addEventListener("load", didLoad, true);
