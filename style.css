@@ -59,6 +59,10 @@ html, body {
   text-align: center;
 }
 
+.content #city {
+  margin-top: 70px;
+}
+
 .wrap > .content > #content-title {
   font-family: Raleway, sans-serif;
   color: #455A64;
