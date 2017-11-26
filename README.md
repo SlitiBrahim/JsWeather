@@ -1,12 +1,12 @@
 # JsWeather
 Little Application for displaying weather depending on your location.
 
-![alt text](1.png)
+![alt text](screenshots/1.jpg)
 
-![alt text](2.png)
+![alt text](screenshots/2.jpg)
 
 Just allow geolocation for finding your position
-![alt text](2.png)
+![alt text](screenshots/2.jpg)
 
 And here it is...
-![alt text](4.png)
+![alt text](screenshots/4.jpg)
