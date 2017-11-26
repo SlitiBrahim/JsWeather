@@ -58,7 +58,7 @@ function didLoad() {
   lookforBtn.addEventListener("mouseover", scaleAnim.bind(true, lookforBtn, 1.04));
   lookforBtn.addEventListener("mouseout", scaleAnim.bind(true, lookforBtn, 1.04, false));
   lookforBtn.addEventListener("click", function() {
-    window.location.href = "index.html";
+    window.location.href = "weather.html";
   });
 }
 
